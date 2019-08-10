@@ -2,7 +2,7 @@ import diLoader from './di';
 import mongooseLoader from './mongoose';
 import Logger from './logger';
 
-export default async ({expressApp}) => {
+export default async () => {
     await mongooseLoader();
     Logger.info('DB connected');
 
@@ -22,4 +22,4 @@ export default async ({expressApp}) => {
         ],
     });
     Logger.info('DI loaded');
-}
+};
