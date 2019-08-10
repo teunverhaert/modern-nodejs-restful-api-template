@@ -2,7 +2,6 @@ import 'reflect-metadata'; // Needed in order to use decorators
 import config from './config';
 import Logger from './loader/logger';
 import {createExpressServer, useContainer} from 'routing-controllers';
-import UserController from './controller/user/UserController';
 import {Container} from 'typedi';
 
 async function startServer() {
@@ -16,7 +15,7 @@ async function startServer() {
         cors: true,
         classTransformer: false,
         controllers: [
-            UserController
+            // Add controllers here
         ]
     });
 
